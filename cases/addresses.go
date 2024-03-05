@@ -1,0 +1,12 @@
+package cases
+
+var Addresses = []struct {
+	Address  string
+	Expected []int
+	Err      bool
+}{
+	{"212.0.2.43", []int{212, 0, 2, 43}, false},
+	{"212.0.2.434", []int{212, 0, 2, 43}, true},
+	{"212.0.2.", []int{212, 0, 2, 43}, true},
+	{"212.0.2.43.2", []int{212, 0, 2, 43}, true},
+}
